@@ -197,8 +197,7 @@ $(function () {
     })
 })
 
-    // var buttons = document.getElementsByClassName('actm-FightCovidSendVip-container')
-    // setInterval(function () {
-    //     buttons.click()
-    // }, 1000)
-
+// var buttons = document.getElementsByClassName('actm-FightCovidSendVip-container')
+// setInterval(function () {
+//     buttons.click()
+// }, 1000)
