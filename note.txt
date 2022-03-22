@@ -1,0 +1,82 @@
+笔记：
+建議：在迭代物件屬性時，使用 for...in；在迭代陣列時，使用 for...of。
+for...in 輸出的是屬性名稱(key)，for...of 輸出的是值(value)
+for...of 是 ES6 的新語法。修復了ES5 for…in 的不足
+for...of 不能迭代物件，需要透過和 Object.keys() 搭配使用
+
+https://eyesofkids.gitbooks.io/javascript-start-from-es6/content/part4/rest_spread.html
+
+slice()可以从已有的数组中返回选定的元素，可以接收两个参数，第一个为起始值，第二个为截止值，
+不给第二参数表示到最后一个元素。
+arr.slice(0)表示从第0个参数取到最后一个元素，是Javascript中复制数组的一种方式。
+
+function argsAsArray(fn, arr) {
+    return fn.apply(this,arr);
+}
+
+调用函数有3种方式：
+obj.func();
+func.call(obj,args);//参数列出
+func.apply(obj,[m,n......]);//参数数组
+
+在JavaScript中，函数是一种对象，其上下文是可以变化的，对应的，函数内的this也是可以变化的，
+函数可以作为一个对象的方法，也可以同时作为另一个对象的方法，
+可以通过Function对象中的call或者apply方法来修改函数的上下文，
+函数中的this指针将被替换为call或者apply的第一个参数。
+将函数 fn 的执行上下文改为 obj 对象，只需要将obj作为call或者apply的第一个参数传入即可。
+
+function speak(fn, obj) {
+  return fn.apply(obj, obj);
+}
+
+const array1 = ['a', 'b', 'c'];
+
+array1.forEach(element => console.log(element));
+
+咱都知道，每个函数都会有arguments对象，该对象包含了所有的执行函数时候的参数，这是一个伪数组，
+只要把它变成一个真正的数组，就可以用数组的方法如ruduce等来求和啦。
+问题是如何把一个伪数组转变成真正的数组呢？
+这里有个方法就是：Array.prototypr.slice.call(arguments),就是这么简单了~~~
+
+因为arguments并非真正的数组，因此要获得callIt的第一个参数之后的所有参数，不能直接使用slice方法截取，
+需要先将arguments转换为真正的数组才行。
+有两种常见的方法，一是使用slice方法：var args = Array . prototype . slice . call ( arguments );
+二是循环遍历逐一填入新数组。
+在获得了args之后，就可以调用apply来执行传入的函数参数。
+
+https://www.jianshu.com/p/ae57baecc57d
+
+[]自身也是一个对象.而数组原型链上有这个slice这个方法。
+
+call()方法的作用和 apply() 方法类似，
+区别就是call()方法接受的是参数列表，而apply()方法接受的是一个参数数组。
+
+
+// 前补零
+'1'.padStart(5, '0')  // '00001'
+ 
+// 后补零
+'1'.padEnd(5, '0')  // '10000'
+ 
+// 任意补位
+'abc'.padEnd(8, '01') // 'abc01010'
+
+
+
+join:
+
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// expected output: "Fire,Air,Water"
+
+console.log(elements.join(''));
+// expected output: "FireAirWater"
+
+console.log(elements.join('-'));
+// expected output: "Fire-Air-Water"
+
+
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor
+
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Learning Class</title>
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+
+<body id="body">
+    <h1>Come on Guys!</h1>
+    <p>Contact me <em>1199090743949</em></p>
+    <table>
+        <tr>
+            <td>Custom sign:</td>
+            <td id="userSign"></td>
+        </tr>
+        <tr>
+            <td>Table tiles:</td>
+            <td id="tiles"></td>
+        </tr>
+        <tr>
+            <td>Grand total:</td>
+            <td id="grandTotal"></td>
+        </tr>
+    </table>
+    <h2>This is a ul.</h2>
+    <ul>
+        <li>first item</li>
+        <li>second item</li>
+        <li>third item</li>
+    </ul>
+    <div id="newItemButton"><button href="#" id="showForm">new item</button></div>
+    <form id="newItemForm">
+        <input type="text" id="itemDescription" placeholder="Add description..." />
+        <input type="submit" id="addButton" value="add" />
+    </form>
+    <a href="#" class="action">Play now!</a>
+    <br>
+    <span class="ribbon">Notice where the orange box is.</span><br>
+    <button onclick="windowPrint()">window.print()</button>
+    <button onclick="windowScreen()">window.creen()</button>
+    <p id="windowWidth">width</p>
+    <p id="mousePosi">mousePosi</p>
+    <p id="helloEve">string test</p>
+    <form id="formSignup" method="post" action="">
+        <label for="username">Creat a username:</label>
+        <input type="text" id="username" />
+        <div id="feedback"></div>
+
+        <label for="password">Creat a password:</label>
+        <input type="password" id="password" />
+
+        <br>
+        <textarea id="message"></textarea>
+        <br>
+        <label for="message" id="charLeft"></label>
+        <br>
+        <label for="message" id="lastKey"></label><br>
+        <input type="checkbox" id="terms" value="Bike">Check to agree to terms.<br>
+        <label for="terms" id="termsHint"></label><br>
+        <input type="submit" value="Sign up!" />
+    </form>
+    <footer id="footer"></footer>
+    <div id="slidAd">
+        Buy Listing Pro for only 16889687w
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/demo.js"></script>
+</body>
+
+</html>
